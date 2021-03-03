@@ -1,0 +1,25 @@
+<!-- <div *ngIf="(artista | async) as artist">
+    <div class="row">
+        <div class="col-2">
+            <img src="artist.images" alt="">
+        </div>
+    </div>
+</div>
+ -->
+
+ <div *ngIf="(artista | async) as artist">
+    {{artist.id}}
+    {{artist.images[0]|json}}
+    {{artist.followers|json}}
+
+
+ </div>
+    
+    
+
+
+
+
+<pre>{{artista|async|json}}</pre>
+
+

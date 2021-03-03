@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col">
+        <input #userText type="text" (keyup)="buscar(userText.value)" class="form-control" placeholder="Buscar Artista">
+    </div>
+</div>
+<hr>
+
+
+ <!-- <div class="card-columns" *ngIf="(artists | async) as newArtistsData">
+    
+    <div class="card" *ngFor="let artist of newArtistsData.artists.items" >
+      <img [src]="artist.images[0].url" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{artist.name}}</h5>
+        <span class="badge bg-dark text-light" *ngFor="let artist of music.artists">{{artist.name}}</span>
+      </div>
+    </div>
+  </div>  -->
+  
+
+  <!-- -----------CON PIPE(MAP)--------------------- -->
+ <div class="card-columns" *ngIf="(artists | async) as newArtistsData">
+    <div class="card" *ngFor="let artist of newArtistsData" >
+      <pre>{{artist|json}}</pre>
+      <img [src]="artist.images | noImages" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{artist.name}}</h5>
+      </div>
+    </div>
+</div> 
+
+
+ 
+
+
+   
+
+

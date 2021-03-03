@@ -1,0 +1,22 @@
+<!-- <div class="card-columns">
+    <div class="card" *ngFor="let music of newMusic" >
+      <img [src]="music.images[0].url" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{music.name}}</h5>
+        <span class="badge bg-dark text-light" *ngFor="let artist of music.artists">{{artist.name}}</span>
+      </div>
+    </div>
+  </div> -->
+
+
+   <!-- <div class="card-columns" *ngIf="(newMusic | async) as newMusicData">
+    <div class="card" *ngFor="let music of newMusicData.albums.items" >
+      <img [src]="music.images[0].url" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{music.name}}</h5>
+        <span class="badge bg-dark text-light" *ngFor="let artist of music.artists">{{artist.name}}</span>
+      </div>
+    </div>
+  </div>   -->
+
+<app-tarjeta-snipet [data]="newMusic"></app-tarjeta-snipet> 
